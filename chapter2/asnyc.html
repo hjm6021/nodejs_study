@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let first = 10
+        // let second = 20
+        // let result = 0
+
+        // function add(x, y) {
+        //     return x + y
+        // }
+
+        // setTimeout(function() {
+        //     result = add(first, second)
+        //     console.log(result) // 30
+        // }, 1000)
+
+        // let first = 10
+        // let second = 20
+        // let result = 0
+
+        // function add(x, y) {
+        //     return x + y
+        // }
+
+        // setTimeout(function() {
+        //     result = add(first, second)
+        //     console.log(result) // 40
+        // }, 1000)
+
+        // first = 20
+
+        // async function f() {
+
+        //     let promise = new Promise((resolve, reject) => {
+        //         setTimeout(() => {console.log("inside"); resolve("완료!")}, 1000)
+        //     });
+        //     console.log("before")
+        //     let result = promise; // 프라미스가 이행될 때까지 기다림 (*)
+        //     console.log("after")
+        //     console.log(result); // "완료!"
+        // }
+
+        // f();
+        const asyncFunc =  () => {
+            console.log('calling')
+            setTimeout(() => console.log('resolved'), 2000)
+        }
+
+        asyncFunc()
+        console.log("gg")
+    </script>
+</body>
+</html>

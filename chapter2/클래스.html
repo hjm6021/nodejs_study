@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var Human = function(type) {
+        //     this.type = type || 'human';
+        // };
+
+        // Human.isHuman = function(human) {
+        //     alert(human instanceof Human)
+        //     return human instanceof Human;
+        // };
+
+        // Human.prototype.breathe = function() {
+        //     alert('h-a-a-a-m');
+        // };
+
+        // var Zero = function(type, firstName, lastName) {
+        //     console.log(arguments)
+        //     Human.apply(this, arguments);
+        //     this.firstName = firstName;
+        //     this.lastName = lastName
+        // };
+
+        // Zero.prototype = Object.create(Human.prototype)
+        // Zero.prototype.constructor = Zero;
+        // Zero.prototype.sayName = function() {
+        //     alert(this.firstName + ' ' + this.lastName);
+        // };
+        // console.log(Human.prototype)
+        // console.log(Zero.prototype)
+        // var oldZero = new Zero('human', 'Zero', 'Cho');
+        // Human.isHuman(oldZero)
+        // oldZero.sayName()
+
+        class Human {
+            constructor(type = 'human') {
+                this.type = type;
+            }
+            static isHuman(human) {
+                return human instanceof Human;
+            }
+
+            breathe() {
+                alert('h-a-a-a-m');
+            }
+        }
+
+        class Zero extends Human {
+            constructor(type, firstName, lastName) {
+                super(type);
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            sayName() {
+                super.breathe();
+                alert(this.firstName + ' ' + this.lastName);
+            }
+        }
+
+        const newZero = new Zero('human', 'Zero', 'Cho');
+        Human.isHuman(newZero)
+        newZero.sayName()
+
+    </script>
+</body>
+</html>
